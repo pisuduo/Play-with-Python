@@ -67,4 +67,7 @@ def quickSort2(arr):
             right.append(x)
     return quickSort2(left)+equal+quickSort2(right)
     
+#testing
+t=[3,5,1,2,7,9,8]
+print(quickSort2(t))
 
