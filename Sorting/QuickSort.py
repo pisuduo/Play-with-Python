@@ -24,7 +24,6 @@ result = quickSort(b)
 ' '.join(map(str, result))
 
 ## QuickSort: 2 Sorting ##
-
 def quickSort2(arr):
     if len(arr)<=1:
         return arr
@@ -38,7 +37,8 @@ def quickSort2(arr):
         elif x>pivot:
             right.append(x)
     return quickSort2(left)+equal+quickSort2(right)
-    
+
+
 #testing
 t=[3,5,1,2,7,9,8]
 print(quickSort2(t))
