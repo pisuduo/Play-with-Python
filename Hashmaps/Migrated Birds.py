@@ -15,3 +15,6 @@ def migratoryBirds2(arr):
     for t in arr:
          count[t] += 1
     return count.index(max(count))
+
+
+
