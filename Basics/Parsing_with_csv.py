@@ -31,3 +31,4 @@ with open ('names.csv','r') as myfile2:
             del line['email']                          # delete email column
             filewritedict.writerow(line)
 
+print(myfile2.closed)
