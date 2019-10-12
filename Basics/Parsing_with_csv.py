@@ -16,7 +16,7 @@ with open ('names.csv','r') as myfile:  #------------- read csv files ----------
 
 
 
-
+'''
 with open ('names.csv','r') as myfile2:     
     filereaderdict=csv.DictReader(myfile2)            # use dictionary readers
     #for line in filereaderdict:
@@ -32,3 +32,12 @@ with open ('names.csv','r') as myfile2:
             filewritedict.writerow(line)
 
 print(myfile2.closed)
+'''
+
+
+with open ('employee.txt','r') as employee:
+    #reader=csv.reader(employee,delimiter=',')
+    reader=csv.reader(employee,delimiter=',', quotechar='|')
+    for row in reader:
+        print(row)
+    
