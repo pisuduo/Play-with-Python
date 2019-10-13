@@ -39,6 +39,7 @@ west={'date':datetime.datetime(2006,5,26,0,0),'price':1432673}
 # Access values of date and price in east dictionary
 print(f"The price for a house in the east neighborhood was ${east['price']} in {east['date']:%m-%d-%Y}")  ##To format the date, use the specifiers %m, %d and %Y.
 
+## use quotes in keys of dictionary!!
 print(f"The price for a house in the west neighborhood was ${west['price']} in {west['date']:%m-%d-%Y}.")
 
 

@@ -32,7 +32,9 @@ print(movie_join)
 
 #-------------------------------Finding and Replacing---------------------------------------------#
 # Split string at line boundaries
-file1='stringa, a ,stttt sgsgsrhs,erhersgsaher' # should be a variable with multiple lines
+file1='stringa, a ,\
+  stttt sgsgsrhs,\
+    erhersgsaher' # should be a variable with multiple lines
 print(file1)
 file_split = file1.splitlines()
 

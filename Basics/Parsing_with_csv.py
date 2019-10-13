@@ -3,7 +3,7 @@ import csv
 '''
 with open ('names.csv','r') as myfile:  #------------- read csv files -----------
     filereader=csv.reader(myfile)
-    next(filereader)                    # returns the next item in an iterato
+    next(filereader)                    # returns the next item in an iterator
     #for line in filereader:
     #    print(line)                     # print lines in the csv file, each line as a list     why can't write after print
 
@@ -37,7 +37,7 @@ print(myfile2.closed)
 
 with open ('employee.txt','r') as employee:
     #reader=csv.reader(employee,delimiter=',')
-    reader=csv.reader(employee,delimiter=',', quotechar='|')
+    reader=csv.reader(employee,delimiter=',', quotechar='|') ## how to use quotechar???
     for row in reader:
         print(row)
     
