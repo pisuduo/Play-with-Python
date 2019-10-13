@@ -13,8 +13,7 @@ print(f"About {fact2:e} of {field2} in the world")                          ## :
 
 print(f"{field3} create around {fact3:.2f}% of the data but only {fact4:.1f}% is analyzed")  ## :.nf: allow n decimals
 
-
-#---------------------------------------------------------------#
+#-------------inline operations and functions---------------------#
 number1=120
 number2=7
 string1='httpswww.datacamp.com'
@@ -28,5 +27,23 @@ print(f"{string1.replace('https', '')}")         ##escape sequences are not allo
 
 # Divide the length of list by 120 rounded to two decimals
 print(f"Only {len(list_links)*100/120:.2f}% of the posts contain links")   ## f strings allow inline operations and functions
+
+a=f"Only {len(list_links)*100/120:.2f}% of the posts contain links"
+print(a)
+print(type(a))
+#-----------------datetime----------------------------------------#
+import datetime
+east={'date':datetime.datetime(2007,4,20,0,0),'price':1232443}
+west={'date':datetime.datetime(2006,5,26,0,0),'price':1432673}
+
+# Access values of date and price in east dictionary
+print(f"The price for a house in the east neighborhood was ${east['price']} in {east['date']:%m-%d-%Y}")  ##To format the date, use the specifiers %m, %d and %Y.
+
+print(f"The price for a house in the west neighborhood was ${west['price']} in {west['date']:%m-%d-%Y}.")
+
+
+
+
+
 
 
