@@ -58,6 +58,8 @@ for tweet in sentiment_analysis:
 	# Write regex to match user mentions and print out result start from @ and can have letters and numbers only
 	print(re.findall(r"@\w+\d*", tweet))
 
+#--------------------------------------------------------------------#
+
 sentiment_analysis=["I would like to apologize for the repeated Video Games Live related tweets. 32 minutes ago",
 "@zaydia but i cant figure out how to get there / back / pay for a hotel 1st May 2019",
 "FML: So much for seniority, bc of technological ineptness 23rd June 2018 17:54"]
@@ -73,5 +75,17 @@ for date in sentiment_analysis:
 # Complete the for loop with a regex to find dates
 for date in sentiment_analysis:
 	print(re.findall(r"\d{1,2}\w+\s\w+\s\d{4}\s\d{1,2}:\d{2}", date))
+
+#---------------------------------------------------------------------#
+
+sentiment_analysis='ITS NOT ENOUGH TO SAY THAT IMISS U #MissYou #SoMuch #Friendship #Forever'
+# Write a regex matching the hashtag pattern
+regex = r"#\w+"
+
+# Replace the regex by an empty string
+no_hashtag = re.sub(regex, "", sentiment_analysis)
+
+# Get tokens by splitting text
+print(re.split(r"\s+", no_hashtag))
 
 
