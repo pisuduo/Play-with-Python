@@ -16,7 +16,7 @@ print('I am {2} happy {0} lalala {1}'.format('now','haha','very'))
 print('{name} is {info}'.format(name=name,info=info))
 
 data={'name':'Anna','info':'a girl'}  # using dictionaries
-print('{data[name]} is {data[info]}'.format(data=data))
+print('{data[name]} is {data[info]}'.format(data=data)) ## no quotes in dictionary!
 
 ##exercises:
 
