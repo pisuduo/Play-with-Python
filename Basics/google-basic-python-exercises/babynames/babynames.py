@@ -41,28 +41,28 @@ def extract_names(filename):
   ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
   """
   # +++your code here+++
-  return
+  result=[]
+  f=open(filename,'r')
+  content=f.read()
+  year=re.search(r'Popularity\sin\s(\d{4})',content)
 
+  yearmatch=year.group(1)
 
-def main():
-  # This command-line parsing code is provided.
-  # Make a list of command line arguments, omitting the [0] element
-  # which is the script itself.
-  args = sys.argv[1:]
+  result.append(yearmatch)
 
-  if not args:
-    print 'usage: [--summaryfile] file [file ...]'
-    sys.exit(1)
-
-  # Notice the summary flag and remove it from args if it is present.
-  summary = False
-  if args[0] == '--summaryfile':
-    summary = True
-    del args[0]
-
-  # +++your code here+++
-  # For each filename, get the names, then either print the text output
-  # or write it to a summary file
+  tuples=re.findall(r'<td>(\d+)</td><td>(\w+)</td>\<td>(\w+)</td>',content)
   
-if __name__ == '__main__':
-  main()
+  namerank={}
+  for t in tuples:
+    (rank,boy,girl)=t
+    if boy  not in namerank:
+      namerank[boy]=rank
+    if girl not in namerank:
+      namerank[girl]=rank
+
+  sortname=sorted(namerank.keys())
+  for name in sortname:
+    result.append(name+ ' '+ namerank[name])
+
+  return result
+
