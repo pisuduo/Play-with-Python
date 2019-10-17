@@ -29,3 +29,4 @@ f=open('C:/Users/maziy/Google Drive/Data Science/Python/Practicecoding/Play-with
 words=f.read()
 f.close()
 
+f1='C:/Users/maziy/Google Drive/Data Science/Python/Practicecoding/Play-with-Python/Basics/google-basic-python-exercises/babynames/baby1990.html'
