@@ -30,7 +30,7 @@ def entropy(v):
     n=len(v)
     for i in range(n):
         if v[i]!=0:
-            e=e-v[i]*np.log(v[i])
+            e=e-v[i]*np.log2(v[i])
     return e
 
 entropy(arr[0,:])
