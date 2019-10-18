@@ -36,3 +36,23 @@ def entropy(v):
 entropy(arr[0,:])
 e=list(map(entropy,arr))
 e=np.array(e)
+
+#--find the frequency of certain character in a string-----#
+def fre(string,x):
+    if x not in string:
+        return 'not found'
+    # build a disctionary to store the frequencies of the characters
+    count={}
+    for s in string:
+        if s not in count:
+            count[s]=1
+        else:
+            count[s]=count[s]+1
+    
+    return count[x]
+
+
+string='aabcdef'
+fre(string,'b')
+fre(string,'m')
+fre(string,'a')
