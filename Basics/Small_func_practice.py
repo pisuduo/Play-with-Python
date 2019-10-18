@@ -37,7 +37,7 @@ entropy(arr[0,:])
 e=list(map(entropy,arr))
 e=np.array(e)
 
-#--find the frequency of certain character in a string-----#
+#------find the frequency of certain character in a string-----#
 def fre(string,x):
     if x not in string:
         return 'not found'
