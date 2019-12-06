@@ -11,6 +11,7 @@ def removeDuplicates(self, nums: List[int]) -> int:
         j +=1
     return i+1
 
+
 ## 27. Remove Element
 def removeElement(self, nums: List[int], val: int) -> int:
     i=0 # slow pointer
